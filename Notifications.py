@@ -1,14 +1,14 @@
 # Import the following modules
 import requests
 import json
-from functions import Open
+from functions import OpenPorts
 
 # Function to send Push Notification
 
 
 def pushbullet_noti(title, body):
 
-	TOKEN = 'o.PWj0YiSI8kMMUdMuNKgBSIKrfe4hDQel' # Pass your Access Token here
+	TOKEN = 'o.AXywoKPih45dKCjhY0ZyTwJ8ePGBkbW2' # Pass your Access Token here
 	# Make a dictionary that includes, title and body
 	msg = {"type": "note", "title": title, "body": body}
 	# Sent a posts request
@@ -21,5 +21,8 @@ def pushbullet_noti(title, body):
 	else:
 		print('Message sent')
 
+message = ''
+for port in OpenPorts:
+	message = '\n' + message + str(port) + '\n'
 
-pushbullet_noti(OpenPorts)
+pushbullet_noti('Open Ports Detected:', message)
