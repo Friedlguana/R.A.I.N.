@@ -7,7 +7,6 @@ import threading
 import time
 from functions import port_scanner
 import psutil
-from functions import OpenPorts
 
 while True:
     #Display project name
@@ -20,7 +19,7 @@ while True:
     print(f" 💦     {Fore.BLUE} ██║  ██║"f"{Fore.RED}██╗"f"{Fore.BLUE}██║  ██║{Fore.RED}██╗{Fore.BLUE}██║"f"{Fore.RED}██╗"f"{Fore.BLUE}██║ ╚████║{Fore.RED}██╗{Fore.BLUE}    💦")
     print(f"    💦  {Fore.BLUE} ╚═╝  ╚═╝"f"{Fore.RED}╚═╝"f"{Fore.BLUE}╚═╝  ╚═╝{Fore.RED}╚═╝{Fore.BLUE}╚═╝{Fore.RED}╚═╝{Fore.BLUE}╚═╝  ╚═══╝{Fore.RED}╚═╝{Fore.BLUE} 💦")
     print("")
-    print(f"{Fore.YELLOW}𝗔𝗻 𝗔𝗻𝘁𝗶-𝗥𝗮𝗻𝘀𝗼𝗺𝘄𝗮𝗿𝗲 𝗖𝘆𝗯𝗲𝗿𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗱 𝗳𝗼𝗿 𝗠𝗲𝗰𝗸𝗮𝘁𝗵𝗼𝗻 𝟮𝟬𝟮𝟮")
+    print(f"{Fore.YELLOW}ᴀ ᴄʏʙᴇʀꜱᴇᴄᴜʀɪᴛʏ ꜰʀᴀᴍᴇᴡᴏʀᴋ ᴅᴇᴠᴇʟᴏᴘᴇᴅ ꜰᴏʀ ᴍᴇᴄᴋᴀᴛʜᴏɴ 2022")
     print(Fore.RESET)
 
     #Display project options
@@ -52,7 +51,7 @@ while True:
 
         # Port scanning via multi-thread distribution
         start = time.time()  # Function Start Time
-        for port in range(1, 65535):
+        for port in range(1, 60000):
             if port in IntPortList:
                 continue
 
@@ -64,7 +63,6 @@ while True:
         print("")
         print("Scan Complete!")
         print(f"Time taken for scan: {end - start} Seconds")
-        print(OpenPorts)
         print('Hit enter to continue...')
         input()
 
@@ -121,6 +119,8 @@ while True:
                   f"{Fore.RED}Upload Speed: {get_size(us / UPDATE_DELAY)}/s \n"
                   f"{Fore.GREEN}Download Speed: {get_size(ds / UPDATE_DELAY)}/s \n"
                   f"{Fore.CYAN}----------------------------------------", end="\r")
+            time.sleep(0.9)
+            clear()
             if i == 5:
                 print('Hit enter to continue...')
                 input()
