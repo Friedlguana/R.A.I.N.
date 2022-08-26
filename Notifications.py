@@ -1,6 +1,7 @@
 # Import the following modules
 import requests
 import json
+from functions import Open
 
 # Function to send Push Notification
 
@@ -21,4 +22,4 @@ def pushbullet_noti(title, body):
 		print('Message sent')
 
 
-pushbullet_noti("Hey", "How are you!")
+pushbullet_noti(OpenPorts)

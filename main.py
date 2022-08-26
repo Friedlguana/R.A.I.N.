@@ -5,7 +5,7 @@ from functions import clear
 from datetime import datetime
 import threading
 import time
-from functions import port_scanner
+from functions import port_scanner, OpenPorts
 import psutil
 
 while True:
