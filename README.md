@@ -1,2 +1,2 @@
 # R.A.I.N.
-Project for Mackathon
+Project for Meckathon
