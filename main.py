@@ -78,9 +78,9 @@ while True:
 
         message = ''
         for port in OpenPorts:
-            message = message + str(port) + '\n'
+            message = '\n' + message + str(port) + '\n'
 
-        pushbullet_noti('Hi', message)
+        pushbullet_noti('Open Ports Detected:', message)
         print("")
         print("")
         print("Scan Complete!")
@@ -141,8 +141,6 @@ while True:
                   f"{Fore.RED}Upload Speed: {get_size(us / UPDATE_DELAY)}/s \n"
                   f"{Fore.GREEN}Download Speed: {get_size(ds / UPDATE_DELAY)}/s \n"
                   f"{Fore.CYAN}----------------------------------------", end="\r")
-            time.sleep(0.9)
-            clear()
             if i == 5:
                 print('Hit enter to continue...')
                 input()
