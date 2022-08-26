@@ -16,10 +16,12 @@ def clear():
 
 #Function 2
 target = "127.0.0.1"
-def port_scanner(port):
+OpenPorts = []
+def port_scanner(Port):
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target, port))
-        print(f"Port {port} is open")
+        s.connect((target, Port))
+        print(f"Port {Port} is open")
+        OpenPorts.append(Port)
     except:
         pass

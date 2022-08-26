@@ -7,7 +7,7 @@ import json
 
 def pushbullet_noti(title, body):
 
-	TOKEN = 'o.PWj0YiSI8kMMUdMuNKgBSIKrfe4hDQel' # Pass your Access Token here
+	TOKEN = 'o.xTMlz3H6vsAQ6zReJ6IN2sm6YYrmU81J' # Pass your Access Token here
 	# Make a dictionary that includes, title and body
 	msg = {"type": "note", "title": title, "body": body}
 	# Sent a posts request
