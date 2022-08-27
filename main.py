@@ -152,7 +152,7 @@ while True:
         clear()
         print('https://github.com/Friedlguana/R.A.I.N.')
         print('Hit Enter to continue...')
-        input()
+        input('')
 
     elif UserInput1.strip() == '0':
         break
