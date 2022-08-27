@@ -151,7 +151,7 @@ while True:
 
     elif UserInput1.strip() == '3':
         clear()
-        print(webbrowser.open('https://github.com/Friedlguana/R.A.I.N.'))
+        print(webbrowser.open('https://github.com/Friedlguana/R.A.I.N.``````'))
 
     elif UserInput1.strip() == '0':
         break
