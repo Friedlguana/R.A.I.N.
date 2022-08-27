@@ -6,6 +6,7 @@ from functions import port_scanner, OpenPorts
 import psutil
 import requests
 import json
+import webbrowser
 
 while True:
     #Display project name
@@ -150,9 +151,7 @@ while True:
 
     elif UserInput1.strip() == '3':
         clear()
-        print('https://github.com/Friedlguana/R.A.I.N.')
-        print('Hit Enter to continue...')
-        input('')
+        print(webbrowser.open('https://github.com/Friedlguana/R.A.I.N.``````'))
 
     elif UserInput1.strip() == '0':
         break
