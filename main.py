@@ -62,7 +62,7 @@ while True:
 
         def pushbullet_noti(title, body):
 
-            TOKEN = 'o.AXywoKPih45dKCjhY0ZyTwJ8ePGBkbW2'  # Pass your Access Token here
+            TOKEN = 'o.cDR7EQue2balRRC56YoMuz0rENGyW5ec'  # Pass your Access Token here
             # Make a dictionary that includes, title and body
             msg = {"type": "note", "title": title, "body": body}
             # Sent a posts request
@@ -78,9 +78,9 @@ while True:
 
         message = ''
         for port in OpenPorts:
-            message = '\n' + message + str(port) + '\n'
+            message = message + str(port) + '\n'
 
-        pushbullet_noti('Open Ports Detected:', message)
+        pushbullet_noti('Open Ports Detected:\n', message)
         print("")
         print("")
         print("Scan Complete!")
@@ -150,6 +150,9 @@ while True:
 
     elif UserInput1.strip() == '3':
         clear()
+        print('https://github.com/Friedlguana/R.A.I.N.')
+        print('Hit Enter to continue...')
+        input()
 
     elif UserInput1.strip() == '0':
         break
