@@ -47,7 +47,7 @@ while True:
             FormattedPortsList.append(WPorts.replace("\n", ""))
 
             # Converting Str List to Int List
-            IntPortList = [eval(IntPort) for IntPort in FormattedPortsList]
+            IntPortList = [int(IntPort) for IntPort in FormattedPortsList]
 
         # Port scanning via multi-thread distribution
         start = time.time()  # Function Start Time
